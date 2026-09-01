@@ -1,0 +1,8 @@
+build/
+.dart_tool/
+.idea/
+*.apk
+*.zip
+*.exe
+*.log
+.DS_Store
