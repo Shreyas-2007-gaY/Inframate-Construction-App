@@ -5,6 +5,7 @@ class User {
   final String password;
   String role; // admin, project_manager, site_engineer, viewer
   final bool isDeactivated;
+  final String? avatarAsset;
 
   User({
     required this.id,
@@ -13,6 +14,7 @@ class User {
     required this.password,
     required this.role,
     this.isDeactivated = false,
+    this.avatarAsset,
   });
 
   Map<String, dynamic> toJson() => {
@@ -22,6 +24,7 @@ class User {
     'password': password,
     'role': role,
     'isDeactivated': isDeactivated,
+    'avatarAsset': avatarAsset,
   };
 
   factory User.fromJson(Map<String, dynamic> json) => User(
@@ -31,5 +34,6 @@ class User {
     password: json['password'],
     role: json['role'],
     isDeactivated: json['isDeactivated'] ?? false,
+    avatarAsset: json['avatarAsset'],
   );
 }

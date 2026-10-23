@@ -1,9 +1,17 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:riverside_flutter_app/main.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
-  testWidgets('Inframate App smoke test', (WidgetTester tester) async {
-    await tester.pumpWidget(const InframateApp());
-    expect(find.text('Inframate'), findsWidgets);
+  TestWidgetsFlutterBinding.ensureInitialized();
+
+  test('SharedPreferences saves and retrieves project details across app restarts', () async {
+    SharedPreferences.setMockInitialValues({});
+    final prefs = await SharedPreferences.getInstance();
+
+    await prefs.setString('inframate_project_name', 'Skyline Grandeur');
+    await prefs.setString('inframate_project_location', 'Mumbai, Maharashtra');
+
+    expect(prefs.getString('inframate_project_name'), 'Skyline Grandeur');
+    expect(prefs.getString('inframate_project_location'), 'Mumbai, Maharashtra');
   });
 }

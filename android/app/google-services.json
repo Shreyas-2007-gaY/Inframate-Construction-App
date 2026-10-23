@@ -1,0 +1,34 @@
+{
+  "project_info": {
+    "project_number": "103948572019",
+    "project_id": "inframate-app",
+    "storage_bucket": "inframate-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:103948572019:android:4b7d156829e1cfa283d920",
+        "android_client_info": {
+          "package_name": "com.example.riverside_flutter_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "103948572019-v4n7p5a3m8j9q2k6d1s0t8u7r6e5w4q3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDa-inframate-client-key-production"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
